@@ -8,6 +8,12 @@ a {
   color: #000000;
 }
 
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 @font-face {
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
@@ -45,7 +51,7 @@ html, body {
 
 .section {
   min-height: 50vh;
-  min-width: 1280px;
+  width: 100%;
 }
 .section.sec-01 {
   margin-top: -110px;
@@ -57,19 +63,13 @@ html, body {
   background-color: #ffffff;
   height: 1030px;
 }
-.section:nth-of-type(3) {
-  background-color: white;
-}
-.section:nth-of-type(4) {
+.section.sec-03 {
   background-color: #efe0fc;
 }
-.section:nth-of-type(5) {
-  background-color: white;
-}
-.section:nth-of-type(6) {
+.section.sec-05 {
   background-color: #1a3569;
 }
-.section:nth-of-type(7) {
+.section.sec-06 {
   background-color: #f3f7ff;
 }
 .section:nth-of-type(8) {
@@ -143,12 +143,14 @@ html, body {
 }
 
 .section.sec-02 .intro-service {
+  max-width: 1280px;
   padding-top: 100px;
+  margin: auto;
 }
-.section.sec-02 .intro-service .title {
+.section.sec-02 .intro-service > .title {
   text-align: center;
 }
-.section.sec-02 .intro-service .title .tag {
+.section.sec-02 .intro-service > .title .tag {
   display: inline-flex;
   height: 48px;
   justify-content: center;
@@ -160,16 +162,247 @@ html, body {
   border-radius: 30px;
   background-color: #2068cb;
 }
-.section.sec-02 .intro-service .title .title-01 {
+.section.sec-02 .intro-service > .title .title-01 {
   margin-top: 26px;
   margin-bottom: 24px;
   font-size: 45px;
   color: #2068cb;
   font-weight: 700;
 }
-.section.sec-02 .intro-service .title .sub {
+.section.sec-02 .intro-service > .title .sub {
   font-size: 18px;
   line-height: 25px;
   font-weight: 500;
   color: #656565;
+}
+.section.sec-02 .intro-service .intro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 575px);
+  grid-template-rows: repeat(2, 275px);
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+.section.sec-02 .intro-service .intro-grid .card {
+  position: relative;
+  padding-left: 164px;
+  padding-top: 64px;
+  background-color: #f5f8fc;
+  border-radius: 18px;
+}
+.section.sec-02 .intro-service .intro-grid .card .img-wrap {
+  position: absolute;
+  top: 60px;
+  left: 45px;
+}
+.section.sec-02 .intro-service .intro-grid .card .description .title {
+  color: #2068cb;
+  font-size: 28px;
+  font-weight: 700;
+}
+.section.sec-02 .intro-service .intro-grid .card .description .sub {
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #5a5a5a;
+}
+
+.section.sec-03 .intro-benefit {
+  max-width: 1280px;
+  text-align: center;
+  padding: 133px 0;
+  margin: auto;
+}
+.section.sec-03 .intro-benefit > .title {
+  font-size: 44px;
+  line-height: 55px;
+  color: #47248c;
+  font-weight: 700;
+}
+.section.sec-03 .intro-benefit .intro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  grid-template-rows: repeat(1, 343px);
+  gap: 13px;
+  justify-content: center;
+  margin-top: 45px;
+}
+.section.sec-03 .intro-benefit .intro-grid .card {
+  text-align: center;
+  border-radius: 28px;
+  background-color: #f7f0fe;
+}
+.section.sec-03 .intro-benefit .intro-grid .card .img-wrap {
+  margin-top: 52px;
+}
+.section.sec-03 .intro-benefit .intro-grid .card .description .title {
+  margin-top: 28px;
+  color: #663fb4;
+  font-size: 28px;
+  font-weight: 700;
+}
+.section.sec-03 .intro-benefit .intro-grid .card .description .sub {
+  margin-top: 30px;
+  color: #474747;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.section.sec-04 .omni-compare {
+  max-width: 1280px;
+  text-align: center;
+  padding: 130px 0;
+  margin: auto;
+}
+.section.sec-04 .omni-compare > .title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 55px;
+}
+.section.sec-04 .omni-compare .diagram {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 400px);
+  gap: 60px;
+  padding: 0 55px;
+  margin-top: 60px;
+  background-image: url("../images/icon-arrow-tobe.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section.sec-04 .omni-compare .diagram .as-is {
+  position: relative;
+  padding: 27px 17px 20px 17px;
+  border-radius: 40px;
+  background-color: #f3f3f3;
+}
+.section.sec-04 .omni-compare .diagram .as-is .title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+.section.sec-04 .omni-compare .diagram .as-is .compare-list {
+  background-color: #ffffff;
+}
+.section.sec-04 .omni-compare .diagram .as-is .compare-list ul > li:before {
+  background-image: url("../images/icon-check-off.png");
+}
+.section.sec-04 .omni-compare .diagram .to-be {
+  position: relative;
+  padding: 27px 17px 20px 17px;
+  border-radius: 40px;
+  border: 3px solid #7b52cf;
+}
+.section.sec-04 .omni-compare .diagram .to-be .title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #47248c;
+}
+.section.sec-04 .omni-compare .diagram .to-be .compare-list {
+  background-color: #f4f4f4;
+}
+.section.sec-04 .omni-compare .diagram .to-be .compare-list ul > li {
+  font-size: 22px;
+  font-weight: 600;
+  color: #744ec1;
+}
+.section.sec-04 .omni-compare .diagram .to-be .compare-list ul > li:before {
+  background-image: url("../images/icon-check-on.png");
+}
+.section.sec-04 .omni-compare .diagram .compare-list {
+  position: absolute;
+  bottom: 20px;
+  left: 17px;
+  right: 17px;
+  top: 80px;
+  text-align: left;
+  border-radius: 24px;
+  padding: 23px 20px;
+}
+.section.sec-04 .omni-compare .diagram .compare-list ul > li {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 14px 0;
+  color: #666666;
+}
+.section.sec-04 .omni-compare .diagram .compare-list ul > li:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 14px;
+}
+
+.section.sec-05 .service-step {
+  max-width: 1280px;
+  padding: 135px 55px 145px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: auto;
+}
+.section.sec-05 .service-step .title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 75px;
+}
+
+.section.sec-06 .service-example {
+  width: 100%;
+  min-width: 1280px;
+}
+.section.sec-06 .service-example > .title {
+  text-align: center;
+}
+.section.sec-06 .service-example > .title .tag {
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 24px;
+  border-radius: 30px;
+  background-color: #2068cb;
+}
+.section.sec-06 .service-example > .title .title-01 {
+  margin-top: 26px;
+  margin-bottom: 24px;
+  font-size: 45px;
+  color: #2068cb;
+  font-weight: 700;
+}
+.section.sec-06 .service-example .example-01 {
+  text-align: center;
+}
+.section.sec-06 .service-example .example-01 h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #181818;
+}
+.section.sec-06 .service-example .example-01 .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 285px);
+  grid-template-rows: repeat(1, 180px);
+  gap: 10px;
+  justify-content: center;
+}
+.section.sec-06 .service-example .example-01 .grid .grid-item {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+.section.sec-06 .service-example .example-01 .grid .grid-item .tit {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+.section.sec-06 .service-example .example-01 .grid .grid-item .desc {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #6a6a6a;
 }
