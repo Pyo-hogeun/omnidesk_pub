@@ -3,6 +3,173 @@ html, body {
   padding: 0;
 }
 
-h1 {
-  color: green;
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+html, body {
+  font-family: "Pretendard";
+  font-weight: 400;
+}
+
+.section {
+  min-height: 50vh;
+  min-width: 1280px;
+}
+.section.sec-01 {
+  margin-top: -110px;
+  background-image: url(../images/bg01.png);
+  background-size: cover;
+  height: 900px;
+}
+.section.sec-02 {
+  background-color: #ffffff;
+  height: 1030px;
+}
+.section:nth-of-type(3) {
+  background-color: white;
+}
+.section:nth-of-type(4) {
+  background-color: #efe0fc;
+}
+.section:nth-of-type(5) {
+  background-color: white;
+}
+.section:nth-of-type(6) {
+  background-color: #1a3569;
+}
+.section:nth-of-type(7) {
+  background-color: #f3f7ff;
+}
+.section:nth-of-type(8) {
+  background-color: #5a82b9;
+}
+
+.gnb {
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 110px;
+  min-width: 1280px;
+  border-bottom: 1px solid #eeeeee;
+  z-index: 1;
+}
+.gnb .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 55px;
+  box-sizing: border-box;
+}
+.gnb .container .btn-group .btn {
+  width: 88px;
+  margin-left: 3px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  height: 36px;
+}
+.btn.round {
+  border-radius: 30px;
+}
+.btn.btn-black {
+  background-color: #323232;
+  color: #ffffff;
+}
+.btn.btn-line {
+  border: 1px solid #323232;
+  color: #323232;
+}
+
+.section.sec-01 {
+  position: relative;
+}
+.section.sec-01 .catch-phrase {
+  position: absolute;
+  top: 414px;
+  left: 55px;
+  color: #323232;
+}
+.section.sec-01 .catch-phrase .phrase-01 {
+  margin: 0;
+  font-size: 55px;
+  line-height: 70px;
+  font-weight: 700;
+}
+.section.sec-01 .catch-phrase .phrase-02 {
+  margin-top: 33px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+.section.sec-02 .intro-service {
+  padding-top: 100px;
+}
+.section.sec-02 .intro-service .title {
+  text-align: center;
+}
+.section.sec-02 .intro-service .title .tag {
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 24px;
+  border-radius: 30px;
+  background-color: #2068cb;
+}
+.section.sec-02 .intro-service .title .title-01 {
+  margin-top: 26px;
+  margin-bottom: 24px;
+  font-size: 45px;
+  color: #2068cb;
+  font-weight: 700;
+}
+.section.sec-02 .intro-service .title .sub {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #656565;
 }
