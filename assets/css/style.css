@@ -1,4 +1,4 @@
-html, body {
+html, body, textarea {
   margin: 0;
   padding: 0;
 }
@@ -8,10 +8,18 @@ a {
   color: #000000;
 }
 
+button {
+  border: 0;
+}
+
 ul, ol {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+input:focus, textarea:focus {
+  outline: none;
 }
 
 @font-face {
@@ -44,7 +52,7 @@ ul, ol {
   font-weight: 700;
   font-style: normal;
 }
-html, body {
+html, body, textarea {
   font-family: "Pretendard";
   font-weight: 400;
 }
@@ -52,6 +60,7 @@ html, body {
 .section {
   min-height: 50vh;
   width: 100%;
+  min-width: 1280px;
 }
 .section.sec-01 {
   margin-top: -110px;
@@ -72,7 +81,7 @@ html, body {
 .section.sec-06 {
   background-color: #f3f7ff;
 }
-.section:nth-of-type(8) {
+.section.sec-07 {
   background-color: #5a82b9;
 }
 
@@ -113,6 +122,10 @@ html, body {
 }
 .btn.btn-black {
   background-color: #323232;
+  color: #ffffff;
+}
+.btn.btn-blue {
+  background-color: #114594;
   color: #ffffff;
 }
 .btn.btn-line {
@@ -343,16 +356,22 @@ html, body {
   box-sizing: border-box;
   margin: auto;
 }
-.section.sec-05 .service-step .title {
+.section.sec-05 .service-step > .title {
   font-size: 40px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 75px;
 }
+.section.sec-05 .service-step .diagram picture img {
+  width: 100%;
+}
 
 .section.sec-06 .service-example {
   width: 100%;
-  min-width: 1280px;
+  max-width: 1280px;
+  padding: 80px 55px 90px;
+  box-sizing: border-box;
+  margin: auto;
 }
 .section.sec-06 .service-example > .title {
   text-align: center;
@@ -371,38 +390,189 @@ html, body {
 }
 .section.sec-06 .service-example > .title .title-01 {
   margin-top: 26px;
-  margin-bottom: 24px;
+  margin-bottom: 64px;
   font-size: 45px;
   color: #2068cb;
   font-weight: 700;
 }
-.section.sec-06 .service-example .example-01 {
+.section.sec-06 .service-example [class*=example-] {
   text-align: center;
 }
-.section.sec-06 .service-example .example-01 h3 {
+.section.sec-06 .service-example [class*=example-] h3 {
   font-size: 22px;
   font-weight: 700;
   color: #181818;
+  text-align: left;
 }
-.section.sec-06 .service-example .example-01 .grid {
+.section.sec-06 .service-example [class*=example-] .grid {
   display: grid;
   grid-template-columns: repeat(4, 285px);
-  grid-template-rows: repeat(1, 180px);
+  grid-template-rows: repeat(1, 200px);
   gap: 10px;
   justify-content: center;
 }
-.section.sec-06 .service-example .example-01 .grid .grid-item {
+.section.sec-06 .service-example [class*=example-] .grid .grid-item {
   background-color: #ffffff;
   border-radius: 20px;
+  text-align: left;
+  padding: 30px 20px;
+  word-break: keep-all;
 }
-.section.sec-06 .service-example .example-01 .grid .grid-item .tit {
+.section.sec-06 .service-example [class*=example-] .grid .grid-item .tit {
   font-size: 20px;
   font-weight: 600;
   color: #000000;
 }
-.section.sec-06 .service-example .example-01 .grid .grid-item .desc {
+.section.sec-06 .service-example [class*=example-] .grid .grid-item .desc {
   margin-top: 20px;
   font-size: 18px;
   font-weight: 500;
+  line-height: 28px;
   color: #6a6a6a;
+  letter-spacing: -1px;
+}
+
+.section.sec-07 {
+  min-width: 1280px;
+}
+.section.sec-07 .contact {
+  max-width: 1280px;
+  padding: 0 55px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  padding-top: 75px;
+  padding-bottom: 70px;
+}
+.section.sec-07 .contact .title {
+  margin-bottom: 45px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+.section.sec-07 .contact .input-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.section.sec-07 .contact .input-group .input-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.section.sec-07 .contact .input-group .input-wrap input {
+  width: 100%;
+  height: 48px;
+  font-size: 18px;
+  padding: 16px;
+  vertical-align: middle;
+  border: 0;
+}
+.section.sec-07 .contact .input-group .input-wrap textarea {
+  width: 100%;
+  font-size: 18px;
+  padding: 16px;
+  border: 0;
+}
+.section.sec-07 .contact .input-group .input-wrap input::placeholder, .section.sec-07 .contact .input-group .input-wrap textarea::placeholder {
+  color: #9a9a9a;
+}
+.section.sec-07 .contact .input-group .input-wrap:nth-of-type(7) {
+  grid-column: 1/4;
+  grid-row: auto;
+}
+.section.sec-07 .contact .submit {
+  margin-top: 18px;
+  color: #ffffff;
+  text-align: right;
+}
+.section.sec-07 .contact .submit .checkbox {
+  display: inline-block;
+  margin-right: 4px;
+}
+.section.sec-07 .contact .submit .checkbox input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.section.sec-07 .contact .submit a.link-to-term {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.section.sec-07 .contact .submit .btn {
+  width: 202px;
+  height: 49px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.section.sec-07 .contact .company-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  color: #ffffff;
+  font-size: 18px;
+}
+.section.sec-07 .contact .company-info .label {
+  font-weight: 700;
+}
+.section.sec-07 .contact .company-info .left > ul li {
+  margin-top: 16px;
+}
+.section.sec-07 .contact .company-info .right {
+  text-align: right;
+}
+.section.sec-07 .contact .company-info .right p {
+  margin: 0;
+}
+.section.sec-07 .contact .company-info .right a.link-to-download {
+  margin-left: 14px;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+footer .info {
+  max-width: 1280px;
+  padding: 56px 55px 75px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  font-size: 16px;
+}
+footer .info .company-name {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #000000;
+}
+footer .info .info-list ul > li {
+  position: relative;
+  color: #484848;
+  margin-bottom: 14px;
+  font-weight: 300;
+}
+footer .info .info-list ul > li:not(.block) {
+  display: inline-block;
+}
+footer .info .info-list ul > li:not(.block):nth-of-type(n+2) {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+footer .info .info-list ul > li:not(.block):nth-of-type(n+2):before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  left: -2px;
+  top: 5px;
+  height: 12px;
+  border-right: 1px solid #484848;
+}
+footer .info .info-list ul > li .label {
+  font-weight: 700;
+  color: #000000;
+}
+footer .info .copyright {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 45px;
+  margin-bottom: 0;
 }
