@@ -1,25 +1,48 @@
 $(document).ready(function(){
-  console.log('연결');
   getSectionHeight();
   getOffset();
   console.log(sectionOffArr);
+  setTimeout(() => {
+    $('.main-visual').addClass('on');
+  }, 2000);
 });
 let sectionOffArr = [];
+// 각 섹션 offset top 값
 function getSectionHeight(){
-  $section = $('.section').each(function(i, e){
+  $section = $('.action').each(function(i, e){
     let offset = parseInt($(this).offset().top);
     sectionOffArr.push(offset);
   });
 }
+// 스크롤값 
 function getOffset(){
   let timer;
+  let current = 0;
+  const adjust = 500; //미세조정
   $(window).on('scroll', function(e){
     if(!timer){
+      
       timer = setTimeout(() => {
         timer = null;
         let top = $(this).scrollTop();
-        console.log('scroll', parseInt(top));
+        current = parseInt(top)
+        $(sectionOffArr).each(function(i, e){
+          if(i > 0){
+            current > e - adjust && $('.action').eq(i).addClass('on');
+          }
+        })
       }, 300);
     }
-  })
+  });
+
 }
+// 스크롤 시작 시 gnb 배경색추가
+$(window).on('scroll', function(e){
+  if($(this).scrollTop() > 100){
+    $('.gnb').addClass('on')
+  } else {
+    $('.gnb').removeClass('on')
+  }
+});
+
+// 스크롤 시 섹션에 trigger
