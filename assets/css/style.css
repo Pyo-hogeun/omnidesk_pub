@@ -113,6 +113,22 @@ html, body, textarea {
   margin-left: 3px;
 }
 
+@media all and (max-width: 451px) {
+  .gnb {
+    min-width: auto;
+    height: 80px;
+  }
+  .gnb .container {
+    padding: 0 20px;
+  }
+  .gnb .container h1 a {
+    display: inline-block;
+    width: 140px;
+  }
+  .gnb .container h1 a img {
+    width: 100%;
+  }
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -137,6 +153,12 @@ html, body, textarea {
   color: #323232;
 }
 
+@media all and (max-width: 451px) {
+  .btn {
+    font-size: 14px;
+    height: 32px;
+  }
+}
 .action {
   opacity: 0;
   transition: all 0.5s;
@@ -158,16 +180,18 @@ html, body, textarea {
     transform: translateY(0);
   }
 }
-.section.sec-01 {
+.section.sec-01 .container {
   position: relative;
+  max-width: 1280px;
+  margin: auto;
 }
-.section.sec-01 .catch-phrase {
+.section.sec-01 .container .catch-phrase {
   position: absolute;
   top: 414px;
   left: 55px;
   color: #323232;
 }
-.section.sec-01 .catch-phrase .phrase-01 {
+.section.sec-01 .container .catch-phrase .phrase-01 {
   margin: 0;
   font-size: 55px;
   line-height: 70px;
@@ -176,7 +200,7 @@ html, body, textarea {
   opacity: 0;
   transform: translateY(20px);
 }
-.section.sec-01 .catch-phrase .phrase-02 {
+.section.sec-01 .container .catch-phrase .phrase-02 {
   margin-top: 33px;
   font-size: 22px;
   font-weight: 500;
@@ -185,250 +209,250 @@ html, body, textarea {
   opacity: 0;
   transform: translateY(40px);
 }
-.section.sec-01 .catch-phrase.on .phrase-01, .section.sec-01 .catch-phrase.on .phrase-02 {
+.section.sec-01 .container .catch-phrase.on .phrase-01, .section.sec-01 .container .catch-phrase.on .phrase-02 {
   opacity: 1;
   transform: translateY(0);
 }
-.section.sec-01 .main-visual {
+.section.sec-01 .container .main-visual {
   position: absolute;
   right: 454px;
   top: 240px;
 }
-.section.sec-01 .main-visual .icon {
+.section.sec-01 .container .main-visual .icon {
   position: absolute;
   opacity: 0;
   transition: all 0.5s linear;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(1) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(1) {
   transition-delay: 0.1s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(1) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(1) img {
   animation: 5s floating infinite linear;
   animation-delay: 0.2s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(2) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(2) {
   transition-delay: 0.2s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(2) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(2) img {
   animation: 5s floating infinite linear;
   animation-delay: 0.4s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(3) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(3) {
   transition-delay: 0.3s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(3) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(3) img {
   animation: 5s floating infinite linear;
   animation-delay: 0.6s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(4) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(4) {
   transition-delay: 0.4s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(4) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(4) img {
   animation: 5s floating infinite linear;
   animation-delay: 0.8s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(5) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(5) {
   transition-delay: 0.5s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(5) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(5) img {
   animation: 5s floating infinite linear;
   animation-delay: 1s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(6) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(6) {
   transition-delay: 0.6s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(6) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(6) img {
   animation: 5s floating infinite linear;
   animation-delay: 1.2s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(7) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(7) {
   transition-delay: 0.7s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(7) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(7) img {
   animation: 5s floating infinite linear;
   animation-delay: 1.4s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(8) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(8) {
   transition-delay: 0.8s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(8) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(8) img {
   animation: 5s floating infinite linear;
   animation-delay: 1.6s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(9) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(9) {
   transition-delay: 0.9s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(9) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(9) img {
   animation: 5s floating infinite linear;
   animation-delay: 1.8s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(10) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(10) {
   transition-delay: 1s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(10) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(10) img {
   animation: 5s floating infinite linear;
   animation-delay: 2s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(11) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(11) {
   transition-delay: 1.1s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(11) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(11) img {
   animation: 5s floating infinite linear;
   animation-delay: 2.2s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(12) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(12) {
   transition-delay: 1.2s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(12) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(12) img {
   animation: 5s floating infinite linear;
   animation-delay: 2.4s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(13) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(13) {
   transition-delay: 1.3s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(13) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(13) img {
   animation: 5s floating infinite linear;
   animation-delay: 2.6s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(14) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(14) {
   transition-delay: 1.4s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(14) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(14) img {
   animation: 5s floating infinite linear;
   animation-delay: 2.8s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(15) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(15) {
   transition-delay: 1.5s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(15) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(15) img {
   animation: 5s floating infinite linear;
   animation-delay: 3s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(16) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(16) {
   transition-delay: 1.6s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(16) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(16) img {
   animation: 5s floating infinite linear;
   animation-delay: 3.2s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(17) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(17) {
   transition-delay: 1.7s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(17) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(17) img {
   animation: 5s floating infinite linear;
   animation-delay: 3.4s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(18) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(18) {
   transition-delay: 1.8s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(18) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(18) img {
   animation: 5s floating infinite linear;
   animation-delay: 3.6s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(19) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(19) {
   transition-delay: 1.9s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(19) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(19) img {
   animation: 5s floating infinite linear;
   animation-delay: 3.8s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(20) {
+.section.sec-01 .container .main-visual .icon:nth-of-type(20) {
   transition-delay: 2s;
 }
-.section.sec-01 .main-visual .icon:nth-of-type(20) img {
+.section.sec-01 .container .main-visual .icon:nth-of-type(20) img {
   animation: 5s floating infinite linear;
   animation-delay: 4s;
 }
-.section.sec-01 .main-visual.on .icon {
+.section.sec-01 .container .main-visual.on .icon {
   opacity: 1;
   transform: translate(0, 0);
 }
-.section.sec-01 .main-visual .icon-01 {
+.section.sec-01 .container .main-visual .icon-01 {
   left: 310px;
   top: 200px;
   transform: translate(-30px, 0);
 }
-.section.sec-01 .main-visual .icon-02 {
+.section.sec-01 .container .main-visual .icon-02 {
   left: 320px;
   top: 313px;
   transform: translate(-30px, -5px);
 }
-.section.sec-01 .main-visual .icon-03 {
+.section.sec-01 .container .main-visual .icon-03 {
   left: 380px;
   top: 353px;
   transform: translate(-30px, -5px);
 }
-.section.sec-01 .main-visual .icon-04 {
+.section.sec-01 .container .main-visual .icon-04 {
   left: 310px;
   top: 393px;
   transform: translate(-30px, -10px);
 }
-.section.sec-01 .main-visual .icon-05 {
+.section.sec-01 .container .main-visual .icon-05 {
   left: 260px;
   top: 463px;
   transform: translate(-30px, -12px);
 }
-.section.sec-01 .main-visual .icon-06 {
+.section.sec-01 .container .main-visual .icon-06 {
   left: -50px;
   top: 463px;
   transform: translate(30px, -15px);
 }
-.section.sec-01 .main-visual .icon-07 {
+.section.sec-01 .container .main-visual .icon-07 {
   left: -100px;
   top: 373px;
   transform: translate(30px, -10px);
 }
-.section.sec-01 .main-visual .icon-08 {
+.section.sec-01 .container .main-visual .icon-08 {
   left: -70px;
   top: 283px;
   transform: translate(30px, -8px);
 }
-.section.sec-01 .main-visual .icon-09 {
+.section.sec-01 .container .main-visual .icon-09 {
   left: -104px;
   top: 89px;
   transform: translate(30px, 2px);
 }
-.section.sec-01 .main-visual .icon-10 {
+.section.sec-01 .container .main-visual .icon-10 {
   left: 336px;
   top: 27px;
   transform: translate(-30px, 10px);
 }
-.section.sec-01 .main-visual .icon-11 {
+.section.sec-01 .container .main-visual .icon-11 {
   left: -4px;
   top: 27px;
   transform: translate(10px, 5px);
 }
-.section.sec-01 .main-visual .icon-12 {
+.section.sec-01 .container .main-visual .icon-12 {
   left: -114px;
   top: -23px;
   transform: translate(30px, 10px);
 }
-.section.sec-01 .main-visual .icon-13 {
+.section.sec-01 .container .main-visual .icon-13 {
   left: 36px;
   top: -64px;
 }
-.section.sec-01 .main-visual .icon-14 {
+.section.sec-01 .container .main-visual .icon-14 {
   left: 106px;
   top: -43px;
 }
-.section.sec-01 .main-visual .icon-15 {
+.section.sec-01 .container .main-visual .icon-15 {
   left: 246px;
   top: -43px;
   transform: translate(-30px, 10px);
 }
-.section.sec-01 .main-visual .icon-16 {
+.section.sec-01 .container .main-visual .icon-16 {
   left: -64px;
   top: 157px;
 }
-.section.sec-01 .main-visual .icon-17 {
+.section.sec-01 .container .main-visual .icon-17 {
   left: 256px;
   top: 227px;
 }
-.section.sec-01 .main-visual .icon-18 {
+.section.sec-01 .container .main-visual .icon-18 {
   left: -94px;
   top: 197px;
 }
-.section.sec-01 .main-visual .icon-19 {
+.section.sec-01 .container .main-visual .icon-19 {
   left: 256px;
   top: 117px;
 }
