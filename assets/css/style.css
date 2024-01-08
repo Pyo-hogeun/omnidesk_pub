@@ -172,12 +172,22 @@ html, body, textarea {
   font-size: 55px;
   line-height: 70px;
   font-weight: 700;
+  transition: all 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
 }
 .section.sec-01 .catch-phrase .phrase-02 {
   margin-top: 33px;
   font-size: 22px;
   font-weight: 500;
   line-height: 35px;
+  transition: all 0.8s;
+  opacity: 0;
+  transform: translateY(40px);
+}
+.section.sec-01 .catch-phrase.on .phrase-01, .section.sec-01 .catch-phrase.on .phrase-02 {
+  opacity: 1;
+  transform: translateY(0);
 }
 .section.sec-01 .main-visual {
   position: absolute;

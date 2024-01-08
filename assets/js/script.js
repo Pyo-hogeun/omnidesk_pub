@@ -4,7 +4,8 @@ $(document).ready(function(){
   console.log(sectionOffArr);
   setTimeout(() => {
     $('.main-visual').addClass('on');
-  }, 2000);
+    $('.sec-01 .catch-phrase').addClass('on');
+  }, 1000);
 });
 let sectionOffArr = [];
 // 각 섹션 offset top 값
