@@ -92,6 +92,7 @@ html, body, textarea {
   }
   .section.sec-01 {
     min-height: 90vh;
+    overflow: hidden;
   }
   .section.sec-02 {
     height: auto;
