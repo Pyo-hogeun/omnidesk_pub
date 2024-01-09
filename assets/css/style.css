@@ -1089,6 +1089,11 @@ html, body, textarea {
   transform-origin: right top;
   transform: rotate(-45deg);
 }
+@media all and (max-width: 451px) {
+  .section.sec-07 .contact .term .white-box {
+    padding: 60px 20px;
+  }
+}
 .section.sec-07 .contact .company-info {
   display: flex;
   justify-content: space-between;
