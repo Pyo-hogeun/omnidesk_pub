@@ -10,6 +10,7 @@ a {
 
 button {
   border: 0;
+  cursor: pointer;
 }
 
 ul, ol {
@@ -1040,6 +1041,53 @@ html, body, textarea {
   height: 49px;
   font-size: 20px;
   font-weight: 500;
+}
+.section.sec-07 .contact .term {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.section.sec-07 .contact .term .white-box {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 40px;
+  line-height: 1.4;
+  font-size: 14px;
+}
+.section.sec-07 .contact .term .white-box p {
+  margin: 0;
+}
+.section.sec-07 .contact .term .white-box h4 {
+  margin-bottom: 5px;
+}
+.section.sec-07 .contact .term .white-box button {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  padding: 0;
+}
+.section.sec-07 .contact .term .white-box button .bar {
+  position: absolute;
+  display: inline-block;
+  height: 3px;
+  width: 30px;
+  background-color: #000000;
+}
+.section.sec-07 .contact .term .white-box button .bar:first-child {
+  left: 0;
+  top: 0;
+  transform-origin: left top;
+  transform: rotate(45deg);
+}
+.section.sec-07 .contact .term .white-box button .bar:last-child {
+  right: 0;
+  top: 0;
+  transform-origin: right top;
+  transform: rotate(-45deg);
 }
 .section.sec-07 .contact .company-info {
   display: flex;

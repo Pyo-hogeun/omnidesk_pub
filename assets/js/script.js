@@ -6,6 +6,7 @@ $(document).ready(function(){
     $('.main-visual').addClass('on');
     $('.sec-01 .catch-phrase').addClass('on');
   }, 1000);
+  termToggle();
 });
 let sectionOffArr = [];
 // 각 섹션 offset top 값
@@ -46,4 +47,13 @@ $(window).on('scroll', function(e){
   }
 });
 
-// 스크롤 시 섹션에 trigger
+//약관 팝업
+function termToggle(){
+  $('.link-to-term').on('click', function(e){
+    e.preventDefault();
+    $('.term').slideDown();
+  });
+  $('.btn-toggle').on('click', function(e){
+    $('.term').slideUp();
+  })
+}
